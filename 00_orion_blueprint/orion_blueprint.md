@@ -123,7 +123,7 @@ This is the register that justifies almost everything built herein. Each item be
 - FP&A, Corporate Finance, and BU Finance each maintain separate actuals extracts with different as-of dates — there's no single source of truth.
 
 **Feeds Workstream 4 (FP&A Transformation):**
-- - Orion still runs a single annual budget cycle with no rolling forecast — the budget is set in November and effectively goes stale by Q2, forcing constant off-cycle re-forecasting that FP&A does manually, entity by entity.
+- Orion still runs a single annual budget cycle with no rolling forecast — the budget is set in November and effectively goes stale by Q2, forcing constant off-cycle re-forecasting that FP&A does manually, entity by entity.
 - Forecast accuracy isn't tracked in any structured way. Regional FP&A teams each define "forecast accuracy" differently, so there's no consistent basis for the Board to judge whether a region is over- or under-forecasting.
 - Budget-vs-actual variance commentary is written manually into PowerPoint each month by five separate BU FP&A teams, with no shared driver-based model underneath so variance explanations are narrative, not quantified.
 
