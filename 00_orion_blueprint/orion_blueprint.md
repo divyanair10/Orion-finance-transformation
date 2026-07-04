@@ -57,12 +57,12 @@ Regional CFOs sit dotted-line into the Group CFO: Jan de Vries (EMEA), Rachel Ki
 
 In Q1 2024, Orion's Board approved a **€120 million Finance Transformation Programme**, internally branded **Project Meridian**, to modernise finance operations, cut the close from nine days to five, standardise processes across all 17 entities, complete the SAP S/4HANA migration, and push automation and self-service analytics across the function.
 
-The programme runs 2024–2027 in four phases, which map directly onto the four seasons of this portfolio:
+The programme runs 2024–2027 in four phases, which map directly onto the four Phases of this portfolio:
 
-- **Phase 1, Stabilise (2024)** → Season 1: close transformation, reconciliation automation, reporting automation
-- **Phase 2, Standardise & Digitise (2025)** → Season 2: FP&A modernisation, pricing analytics, customer profitability
-- **Phase 3, Decision Support (2025–2026)** → Season 3: treasury, capital allocation, M&A
-- **Phase 4, Strategise (2026–2027)** → Season 4: equity story, investor narrative, capital strategy
+- **Phase 1, Stabilise (2024)** → close transformation, reconciliation automation, reporting automation
+- **Phase 2, Standardise & Digitise (2025)** → FP&A modernisation, pricing analytics, customer profitability
+- **Phase 3, Decision Support (2025–2026)** → treasury, capital allocation, M&A
+- **Phase 4, Strategise (2026–2027)** → equity story, investor narrative, capital strategy
 
 Every project you build should be traceable back to this mandate. It's not twelve disconnected exercises — it's one programme unfolding in sequence, and your role evolves as it does.
 
@@ -84,7 +84,7 @@ Net debt ticked up temporarily in FY2024 (restructuring cash costs) before falli
 
 The close currently takes **nine business days**, against a Board-mandated target of five. It unfolds roughly like this:
 
-Days 1–2 are sub-ledger close — AP/AR cutoff and intercompany billing cutoff, run out of SSC Poland. Days 2–3 handle fixed asset roll-forward, inventory close, and payroll accruals across SSC Poland and FinOps India. By days 3–4, each of the 17 entities closes its own GL independently — there's no synchronised close calendar across entities, which is itself part of the problem. Days 4–6 are consolidation, where Corporate Finance layers manual adjustments on top of the SAP consolidation module's output, because the module's output alone isn't trusted. Days 6–7 cover balance sheet reconciliation and substantiation — 18 reconciliation packs per entity, using inconsistent templates. Days 7–8 are spent assembling the management reporting pack, which currently means stitching together 42 separate Excel files. The cycle closes on days 8–9 with review, final adjustments, and sign-off at the Close Steering Committee.
+Days 1–2 are sub-ledger close — AP/AR cutoff and intercompany billing cutoff, run out of SSC Poland. Days 2–3 handle fixed asset roll-forward, inventory close, and payroll accruals across SSC Poland and FinOps India. By days 3–4, each of the 17 entities closes its own GL independently — there's no synchronised close calendar across entities, which is itself part of the problem. Days 4–6 are consolidation, where Corporate Finance layers manual adjustments on top of the SAP consolidation Phase's output, because the Phase's output alone isn't trusted. Days 6–7 cover balance sheet reconciliation and substantiation — 18 reconciliation packs per entity, using inconsistent templates. Days 7–8 are spent assembling the management reporting pack, which currently means stitching together 42 separate Excel files. The cycle closes on days 8–9 with review, final adjustments, and sign-off at the Close Steering Committee.
 
 **The baseline numbers you'll be measured against:**
 
@@ -137,7 +137,7 @@ This is the register that justifies almost everything you'll build. Each item be
 ## 9. How the Systems Actually Talk to Each Other
 
 Understanding where data physically moves — and where it breaks — is the real diagnostic foundation for Workstreams 1 and 2.
-Customer data flows nightly from Salesforce into SAP via partial field mapping, which is exactly where the 2,800 duplicate records originate. Each of the 17 entity ledgers in SAP feeds into the Group Consolidation module, but Corporate Finance doesn't trust that output on its own — hence the manual Excel adjustments layered on top every cycle. Treasury's FX and cash system feeds SAP monthly, but the two systems' FX revaluation figures don't reconcile, producing that recurring €2–4M gap. Concur feeds AP via batch upload; Workday feeds payroll accruals into the GL monthly, with timing mismatches flagged in two of the last four cycles. SSC Poland's local cost centre mapping table feeds into SAP HQ's master data, with the 6% mismatch already noted. And FinOps India produces those 18 reconciliation packs per entity in manual Excel templates with no standard format, which Corporate Finance then reviews one by one before the Group Consolidation output is finally extracted — manually — into the 42 separate files that make up the management reporting pack.
+Customer data flows nightly from Salesforce into SAP via partial field mapping, which is exactly where the 2,800 duplicate records originate. Each of the 17 entity ledgers in SAP feeds into the Group Consolidation Phase, but Corporate Finance doesn't trust that output on its own — hence the manual Excel adjustments layered on top every cycle. Treasury's FX and cash system feeds SAP monthly, but the two systems' FX revaluation figures don't reconcile, producing that recurring €2–4M gap. Concur feeds AP via batch upload; Workday feeds payroll accruals into the GL monthly, with timing mismatches flagged in two of the last four cycles. SSC Poland's local cost centre mapping table feeds into SAP HQ's master data, with the 6% mismatch already noted. And FinOps India produces those 18 reconciliation packs per entity in manual Excel templates with no standard format, which Corporate Finance then reviews one by one before the Group Consolidation output is finally extracted — manually — into the 42 separate files that make up the management reporting pack.
 Several finance teams maintain parallel Excel-based ‘shadow models’ for reporting and forecasting due to perceived limitations in SAP and SAC outputs.
 **The diagnostic takeaway:** the close isn't slow because of one bottleneck. It's slow because of five uncoordinated manual bridges between systems that were never designed to talk to each other natively. That finding, quantified, is what your Workstream 1 current-state assessment needs to land on.
 
