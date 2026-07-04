@@ -30,7 +30,7 @@ Orion's 17 entities cluster into four regions:
 - **APAC** — Singapore (regional HQ), Japan, Korea, China, India, Taiwan. China combines manufacturing and sales; India houses the Finance Operations shared centre.
 - **Poland** — a single entity dedicated entirely to the Shared Service Centre.
 
-Intercompany trading between these entities is material and deliberately messy — shared manufacturing component cross-charges, R&D cost-sharing agreements, and management fee recharges all flow between them, which creates intercompany reconciliation complexity across entities..
+Intercompany trading between these entities is material and deliberately messy — shared manufacturing component cross-charges, R&D cost-sharing agreements, and management fee recharges all flow between them, which creates intercompany reconciliation complexity across entities.
 
 ---
 
@@ -42,14 +42,12 @@ Reporting into her:
 
 - **Corporate Finance (100)** — led by Group Controller Thomas Reijnders. Covers Controllership, External Reporting, Technical Accounting, Consolidation.
 - **FP&A (90)** — led by Priya Nair. Covers Group, Regional, and Business Unit FP&A.
-- **Finance Transformation (40)** — led by David Okonkwo. Covers Process Excellence, Automation, Data Analytics, and ERP Transformation. **This is your team.**
+- **Finance Transformation (40)** — led by David Okonkwo. Covers Process Excellence, Automation, Data Analytics, and ERP Transformation.
 - **Shared Service Centre, Poland (180)** — led by Katarzyna Wiśniewska. Handles AP, AR, GL, Fixed Assets, and Master Data.
 - **Finance Operations, India (120)** — led by Arjun Mehta. Handles Reporting Support, Reconciliations, Product Costing Support, Data Quality, and Analytics.
 - **Treasury (25)** under Sophie Laurent, **Tax (30)** under Henrik Larsson, **Internal Audit (20)** under Fatima Al-Rashid, and **Business Finance Partners (45)** embedded across the five BUs.
 
 Regional CFOs sit dotted-line into the Group CFO: Jan de Vries (EMEA), Rachel Kim (Americas), Wei Zhang (APAC).
-
-**Your position, precisely:** you sit inside the **Project Meridian Delivery Office (PMO)**, within the Finance Transformation workstream, on what's called the **Data & Close Optimisation Squad**. That framing matters — it's what justifies you pulling data from SSC Poland, FinOps India, Treasury, and Corporate Finance without it feeling implausible, and it positions your work as governed delivery rather than freelance analysis. You report progress through the PMO's fortnightly delivery review, which in turn feeds the monthly Close Steering Committee.
 
 ---
 
@@ -63,8 +61,6 @@ The programme runs 2024–2027 in four phases, which map directly onto the four 
 - **Phase 2, Standardise & Digitise (2025)** → FP&A modernisation, pricing analytics, customer profitability
 - **Phase 3, Decision Support (2025–2026)** → treasury, capital allocation, M&A
 - **Phase 4, Strategise (2026–2027)** → equity story, investor narrative, capital strategy
-
-Every project you build should be traceable back to this mandate. It's not twelve disconnected exercises — it's one programme unfolding in sequence, and your role evolves as it does.
 
 ---
 
@@ -86,7 +82,7 @@ The close currently takes **nine business days**, against a Board-mandated targe
 
 Days 1–2 are sub-ledger close — AP/AR cutoff and intercompany billing cutoff, run out of SSC Poland. Days 2–3 handle fixed asset roll-forward, inventory close, and payroll accruals across SSC Poland and FinOps India. By days 3–4, each of the 17 entities closes its own GL independently — there's no synchronised close calendar across entities, which is itself part of the problem. Days 4–6 are consolidation, where Corporate Finance layers manual adjustments on top of the SAP consolidation Phase's output, because the Phase's output alone isn't trusted. Days 6–7 cover balance sheet reconciliation and substantiation — 18 reconciliation packs per entity, using inconsistent templates. Days 7–8 are spent assembling the management reporting pack, which currently means stitching together 42 separate Excel files. The cycle closes on days 8–9 with review, final adjustments, and sign-off at the Close Steering Committee.
 
-**The baseline numbers you'll be measured against:**
+**The baseline numbers measured against:**
 
 | Metric | Current State |
 |---|---|
@@ -110,7 +106,7 @@ Orion isn't SOX-listed given its private status, but the Board has mandated SOX-
 
 ## 8. The Pain Points Register
 
-This is the register that justifies almost everything you'll build. Each item below is tagged to the workstream it feeds.
+This is the register that justifies almost everything built herein. Each item below is tagged to the workstream it feeds.
 
 **Feeds Workstream 1 (Close):**
 - 37% of journal entries are still manual Excel uploads into SAP, with no automated interface — a direct driver of both error risk and close delay.
@@ -139,11 +135,11 @@ This is the register that justifies almost everything you'll build. Each item be
 Understanding where data physically moves — and where it breaks — is the real diagnostic foundation for Workstreams 1 and 2.
 Customer data flows nightly from Salesforce into SAP via partial field mapping, which is exactly where the 2,800 duplicate records originate. Each of the 17 entity ledgers in SAP feeds into the Group Consolidation Phase, but Corporate Finance doesn't trust that output on its own — hence the manual Excel adjustments layered on top every cycle. Treasury's FX and cash system feeds SAP monthly, but the two systems' FX revaluation figures don't reconcile, producing that recurring €2–4M gap. Concur feeds AP via batch upload; Workday feeds payroll accruals into the GL monthly, with timing mismatches flagged in two of the last four cycles. SSC Poland's local cost centre mapping table feeds into SAP HQ's master data, with the 6% mismatch already noted. And FinOps India produces those 18 reconciliation packs per entity in manual Excel templates with no standard format, which Corporate Finance then reviews one by one before the Group Consolidation output is finally extracted — manually — into the 42 separate files that make up the management reporting pack.
 Several finance teams maintain parallel Excel-based ‘shadow models’ for reporting and forecasting due to perceived limitations in SAP and SAC outputs.
-**The diagnostic takeaway:** the close isn't slow because of one bottleneck. It's slow because of five uncoordinated manual bridges between systems that were never designed to talk to each other natively. That finding, quantified, is what your Workstream 1 current-state assessment needs to land on.
+**The diagnostic takeaway:** the close isn't slow because of one bottleneck. It's slow because of five uncoordinated manual bridges between systems that were never designed to talk to each other natively. That finding, quantified, is what the Workstream 1 current-state assessment needs to land on.
 
 ---
 
-## 10. Chart of Accounts — Enough Detail to Feel Real
+## 10. Chart of Accounts — Detail to Feel Real
 
 The account structure follows standard SAP numeric ranges — assets in the 100000s–300000s, liabilities in the 400000s–500000s, equity in the 600000s, revenue in the 700000s, cost of goods sold in the 800000s (low range), operating expenses in the 800000s (high range), and non-operating items in the 900000s.
 
@@ -158,7 +154,6 @@ Cost centres follow a `[Region]-[BU]-[Function]-[sequence]` convention, e.g. `EM
 ## 11. Standing Narrative Rules
 
 A few rules keep 18 months of Workstreams consistent:
-
 - Every figure, name, and structure in this document is locked. Changes get logged at the top of this file, not made silently.
 - Every workstream should trace back to Project Meridian explicitly — it's the reason the work exists.
 - Recurring characters should reappear where plausible: Okonkwo commissions Workstream 1, van der Berg is the audience for the Workstream 11 Investor Day deck, and so on.
@@ -166,5 +161,3 @@ A few rules keep 18 months of Workstreams consistent:
 - Anything new introduced in an workstream — a person, an entity, a number — gets folded back into this document as a logged revision, not left orphaned in one project's files.
 
 ---
-
-*End of Orion Bible v2.1. Next: Workstream 1 — Month-End Close Transformation, opening with a current-state diagnostic built on Sections 6, 8, and 9.*
