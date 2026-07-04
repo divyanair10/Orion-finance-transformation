@@ -122,6 +122,16 @@ This is the register that justifies almost everything built herein. Each item be
 - Four different working definitions of "Adjusted EBITDA" exist across the five business units.
 - FP&A, Corporate Finance, and BU Finance each maintain separate actuals extracts with different as-of dates — there's no single source of truth.
 
+**Feeds Episode 4 (FP&A Transformation):**
+Orion still runs a single annual budget cycle with no rolling forecast — the budget is set in November and effectively goes stale by Q2, forcing constant off-cycle re-forecasting that FP&A does manually, entity by entity.
+Forecast accuracy isn't tracked in any structured way. Regional FP&A teams each define "forecast accuracy" differently, so there's no consistent basis for the Board to judge whether a region is over- or under-forecasting.
+Budget-vs-actual variance commentary is written manually into PowerPoint each month by five separate BU FP&A teams, with no shared driver-based model underneath — so variance explanations are narrative, not quantified.
+
+**Feeds Workstream 5 (Pricing Analytics):**
+There's no group-wide, product-level margin visibility. Pricing decisions are made locally by regional commercial teams, with Finance seeing the P&L impact only after the fact.
+Discounting authority is decentralised down to account managers in several regions, with no systematic tracking of discount depth against customer profitability — a pattern flagged internally but never quantified.
+List prices for the same product can differ by more than 15% across regions with no documented rationale tied to cost-to-serve or local market elasticity.
+
 **Feeds Workstream 6 (Customer Profitability):**
 - Roughly 2,800 duplicate or near-duplicate customer records exist across Salesforce and SAP, a legacy of historical M&A activity and absent MDM governance.
 
