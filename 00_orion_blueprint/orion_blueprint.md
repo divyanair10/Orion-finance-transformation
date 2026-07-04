@@ -143,8 +143,11 @@ This is the register that justifies almost everything built herein. Each item be
 ## 9. How the Systems Actually Talk to Each Other
 
 Understanding where data physically moves — and where it breaks — is the real diagnostic foundation for Workstreams 1 and 2.
-Customer data flows nightly from Salesforce into SAP via partial field mapping, which is exactly where the 2,800 duplicate records originate. Each of the 17 entity ledgers in SAP feeds into the Group Consolidation Phase, but Corporate Finance doesn't trust that output on its own — hence the manual Excel adjustments layered on top every cycle. Treasury's FX and cash system feeds SAP monthly, but the two systems' FX revaluation figures don't reconcile, producing that recurring €2–4M gap. Concur feeds AP via batch upload; Workday feeds payroll accruals into the GL monthly, with timing mismatches flagged in two of the last four cycles. SSC Poland's local cost centre mapping table feeds into SAP HQ's master data, with the 6% mismatch already noted. And FinOps India produces those 18 reconciliation packs per entity in manual Excel templates with no standard format, which Corporate Finance then reviews one by one before the Group Consolidation output is finally extracted — manually — into the 42 separate files that make up the management reporting pack.
+Customer data flows nightly from Salesforce into SAP via partial field mapping, which is exactly where the 2,800 duplicate records originate. Each of the 17 entity ledgers in SAP feeds into the Group Consolidation Phase, but Corporate Finance doesn't trust that output on its own — hence the manual Excel adjustments layered on top every cycle. 
+
+Treasury's FX and cash system feeds SAP monthly, but the two systems' FX revaluation figures don't reconcile, producing that recurring €2–4M gap. Concur feeds AP via batch upload; Workday feeds payroll accruals into the GL monthly, with timing mismatches flagged in two of the last four cycles. SSC Poland's local cost centre mapping table feeds into SAP HQ's master data, with the 6% mismatch already noted. FinOps India produces those 18 reconciliation packs per entity in manual Excel templates with no standard format, which Corporate Finance then reviews one by one before the Group Consolidation output is finally extracted — manually — into the 42 separate files that make up the management reporting pack.
 Several finance teams maintain parallel Excel-based ‘shadow models’ for reporting and forecasting due to perceived limitations in SAP and SAC outputs.
+
 **The diagnostic takeaway:** the close isn't slow because of one bottleneck. It's slow because of five uncoordinated manual bridges between systems that were never designed to talk to each other natively. That finding, quantified, is what the Workstream 1 current-state assessment needs to land on.
 
 ---
@@ -160,14 +163,4 @@ Intercompany transactions are tracked in dedicated account ranges for receivable
 Cost centres follow a `[Region]-[BU]-[Function]-[sequence]` convention, e.g. `EMEA-SEMI-MFG-1042`. Profit centres align to the intersection of Business Unit and Region.
 
 ---
-
-## 11. Standing Narrative Rules
-
-A few rules keep 18 months of Workstreams consistent:
-- Every figure, name, and structure in this document is locked. Changes get logged at the top of this file, not made silently.
-- Every workstream should trace back to Project Meridian explicitly — it's the reason the work exists.
-- Recurring characters should reappear where plausible: Okonkwo commissions Workstream 1, van der Berg is the audience for the Workstream 11 Investor Day deck, and so on.
-- Financial data introduced in later workstreams must stay arithmetically consistent with Section 5.
-- Anything new introduced in an workstream — a person, an entity, a number — gets folded back into this document as a logged revision, not left orphaned in one project's files.
-
 ---
